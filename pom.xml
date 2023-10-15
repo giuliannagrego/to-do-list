@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>giuliannagrego</groupId>
 	<artifactId>todolist</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>todolist</name>
 	<description>Gerenciador de tarefas</description>
 	<properties>
@@ -20,10 +20,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<version>3.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<version>3.1.0</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -61,8 +63,15 @@
             <artifactId>tomcat-embed-core</artifactId>
             <version>10.1.13</version>
         </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+			<version>3.1.2</version>
 
-    </dependencies>
+		</dependency>
+
+	</dependencies>
 
 	<build>
 		<plugins>
