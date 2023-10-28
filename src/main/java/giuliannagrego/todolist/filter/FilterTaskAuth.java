@@ -2,7 +2,7 @@ package giuliannagrego.todolist.filter;
 
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
-import giuliannagrego.todolist.user.repository.IUserRepository;
+import giuliannagrego.todolist.repository.IUserRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -44,7 +44,7 @@ public class FilterTaskAuth extends OncePerRequestFilter {
             // Validar usuário
             var user = this.userRepository.findByUsername(username);
             if(user == null) {
-                response.sendError(401);
+                response.sendError(401);/*Tá vendo que voce sabe usar o erro certo? */
             } else {
                 // Validar senha
                 var passwordVerify = BCrypt.verifyer().verify(password.toCharArray(), user.getPassword());
@@ -58,6 +58,7 @@ public class FilterTaskAuth extends OncePerRequestFilter {
         } else {
             filterChain.doFilter(request, response);
         }
-
+        /* MA que porra é essa aqui em cima ? abriu um criadouro de ifs? reduz essa validação de usuario e senha
+        tá confusa d+ */
     }
 }

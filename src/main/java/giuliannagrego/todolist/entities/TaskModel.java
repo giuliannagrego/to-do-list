@@ -1,4 +1,5 @@
-package giuliannagrego.todolist.task.entities;
+package giuliannagrego.todolist.entities;
+//Mais uma pasta movida//
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -19,15 +20,12 @@ public class TaskModel {
     @GeneratedValue(generator = "UUID")
     private UUID id;
     private String description;
-
     @Column(length = 50)
     private String title;
     private LocalDateTime startAt;
     private LocalDateTime endAt;
     private String priority;
-
     private UUID idUser;
-
     @CreationTimestamp
     private LocalDateTime createdAt;
 
@@ -36,6 +34,9 @@ public class TaskModel {
             throw new Exception("O campo title deve conter no máximo 50 caracteres");
         }
         this.title = title;
-    }
 
+    /*O lombook já dispõe de um setTitle no @Data.Carece teste pra ver como funcionaria a utilização desse cara
+    * se voce ia precisar definir ele para sobrepor o base mas como nunca é usado, nem deveria estar aqui :D
+    * no proprio @ voce poderia ja definir uma mensagem de erro caso passe dos 50, mas é conhecimento futuro */
+    }
 }

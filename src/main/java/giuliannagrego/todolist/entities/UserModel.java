@@ -1,4 +1,5 @@
-package giuliannagrego.todolist.user.entities;
+package giuliannagrego.todolist.entities;
+//Mais uma
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -17,12 +18,10 @@ public class UserModel {
     @Id
     @GeneratedValue(generator = "UUID")
     private UUID id;
-
     @Column(unique = true)
     private String username;
     private String name;
     private String password;
-
     @CreationTimestamp
     private LocalDateTime createdAt;
 

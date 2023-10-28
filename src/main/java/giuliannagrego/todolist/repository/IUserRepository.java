@@ -1,6 +1,6 @@
-package giuliannagrego.todolist.user.repository;
-
-import giuliannagrego.todolist.user.entities.UserModel;
+package giuliannagrego.todolist.repository;
+/*blablabla morreu a /user*/
+import giuliannagrego.todolist.entities.UserModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;
